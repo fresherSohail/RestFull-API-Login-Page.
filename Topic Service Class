@@ -1,0 +1,27 @@
+package io.javabrains.springbootstarter.topic;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
+import org.springframework.stereotype.Service;
+
+@Service
+public class TopicService {
+
+	private List<Topic> topics = new ArrayList<>(Arrays.asList(
+			new Topic("Sohail Shaikh", "8850599532"),
+			new Topic("Ismail Khan", "IsmailToKhan"),
+			new Topic("Mark Zukerbarg", "FaceBook"),
+			new Topic("Jeff Bezos", "Amazon")
+			));	
+	
+	public List<Topic> getAllTopics(){
+		return topics;
+	}
+
+	public void addTopic(Topic topic) {
+		topics.add(topic);
+	}
+	
+}
